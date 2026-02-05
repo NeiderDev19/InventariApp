@@ -16,6 +16,6 @@ public class Categoria {
     private Long idCategoria;
     private String nombre;
     private boolean activo;
-    private LocalDate fechaCreacion;
+    private LocalDate fechaCreacion = LocalDate.now();
     
 }

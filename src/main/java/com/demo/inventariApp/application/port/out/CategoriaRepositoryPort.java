@@ -10,5 +10,6 @@ public interface CategoriaRepositoryPort {
     List<Categoria> getCategorias();
     Categoria getById(Long id);
     boolean existsByNombre(String nombre);
+    boolean existsByNombreAndIdNot(String nombre,Long id);
 
 }

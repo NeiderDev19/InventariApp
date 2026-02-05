@@ -34,6 +34,10 @@ public class CategoriaService implements CategoriaInputPort {
     @Override
     public Categoria editarCategoria(Long id, String nombre) {
         Categoria categoria = categoriaRepositoryPort.getById(id);
+        boolean existe = categoriaRepositoryPort.existsByNombreAndIdNot(nombre, id);
+        if(existe){
+            throw new RuntimeException("La categoria ya existe");
+        }
         categoria.setNombre(nombre);
         return categoriaRepositoryPort.saveCategoria(categoria); 
     }

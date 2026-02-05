@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -32,11 +33,12 @@ public class UsuarioController {
             List<UsuarioResponseDTO> response = mapper.toResponseList(usuario);
             return ResponseEntity.ok(response);
         }
-
-        @PostMapping("/estado/{estado}")
-        public ResponseEntity<?> cambiarEstado(@PathVariable boolean estado,@RequestParam Long id){
+        
+        //Actualizar parcialmente , "deberia" llevar un DTO
+        @PatchMapping("/estado/{estado}")
+        public ResponseEntity<Void> cambiarEstado(@PathVariable boolean estado,@RequestParam Long id){
             usuarioService.changeStateUser(id, estado);
-            return ResponseEntity.ok("Estado del usuario cambiado");
+            return ResponseEntity.noContent().build();
         }
 
 

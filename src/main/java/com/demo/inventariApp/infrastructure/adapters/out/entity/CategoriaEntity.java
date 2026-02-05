@@ -23,13 +23,14 @@ public class CategoriaEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    @Column(name = "id_categoria")
+    private Long idCategoria;
     @Column(nullable = false)
     private String nombre;
     @Column(nullable = false)
     private boolean activo;
     @Column(nullable = false)
-    private LocalDate fechaCreacion;
+    private LocalDate fechaCreacion = LocalDate.now();
 
 
 
