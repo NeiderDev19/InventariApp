@@ -16,15 +16,19 @@ public class Producto {
     private Long idProducto;
     private String nombre;
     private String descripcion;
-    private Double precioCompra;
-    private Double precioVenta;
-    private Double iva;
-    private int stock;
+    private int stockActual;
     private int stockMinimo;
     private UnidadProducto unidad;
     private String codigoBarras;
-    private boolean activo;
+    private boolean activo = true;
     private Categoria categoria;
     private LocalDateTime fechaCreacion;
+
+    public void agregarStock(int cantidad){
+        if(cantidad <= 0){
+            throw new RuntimeException("CantidadInvalida");
+        }
+        this.stockActual += cantidad;
+    }
     
 }

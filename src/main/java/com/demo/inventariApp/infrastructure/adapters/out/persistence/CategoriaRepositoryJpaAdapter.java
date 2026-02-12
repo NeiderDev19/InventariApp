@@ -24,7 +24,7 @@ public class CategoriaRepositoryJpaAdapter implements CategoriaRepositoryPort {
     public Categoria saveCategoria(Categoria categoria) {
         CategoriaEntity entity = mapper.domainToEntity(categoria);
         CategoriaEntity save = categoriaJpaRepository.save(entity);
-        return mapper.entitytoDomain(entity);
+        return mapper.entitytoDomain(save);
     }
 
     @Override

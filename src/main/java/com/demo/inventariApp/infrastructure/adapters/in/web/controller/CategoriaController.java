@@ -19,6 +19,8 @@ import com.demo.inventariApp.infrastructure.mapper.CategoriaMapper;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestParam;
+
 
 
 @RestController
@@ -36,6 +38,12 @@ public class CategoriaController {
     public ResponseEntity<List<Categoria>> getAllCategories(){
         return ResponseEntity.ok(categoriaService.getCategorias());
     }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Categoria> getById(@PathVariable Long id) {
+        return ResponseEntity.ok(categoriaService.getCategoriaById(id));
+    }
+    
 
     @PostMapping("/save")
     public ResponseEntity<CreateCategoriaDTO> saveCategoria(@RequestBody CreateCategoriaDTO categoria) {
