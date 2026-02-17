@@ -3,6 +3,7 @@ package com.demo.inventariApp.infrastructure.adapters.in.web.controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.inventariApp.application.port.in.ProductoInputPort;
 import com.demo.inventariApp.application.port.service.ProductoService;
 import com.demo.inventariApp.domain.model.Producto;
 import com.demo.inventariApp.infrastructure.adapters.in.web.dto.categoria.EditEstadoDTO;
@@ -32,7 +33,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @AllArgsConstructor
 public class ProductoController {
 
-    private final ProductoService productoService;
+    private final ProductoInputPort productoService;
 
     private final ProductoMapper mapper;
 

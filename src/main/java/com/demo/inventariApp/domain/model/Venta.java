@@ -19,6 +19,8 @@ public class Venta {
     private TipoPago formaPago;
     private String estado;
     private Usuario usuario;
-
+    private Double totalIva;
+    private Double subtotal;
+    private String cliente;
 
 }

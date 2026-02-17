@@ -29,6 +29,7 @@ public class LoteProductoService implements LoteProductoInputPort{
             throw new RuntimeException("La cantidad debe ser mayor a 0");
         }
         loteProducto.setProducto(producto);
+        loteProducto.setCantidadAgregada(loteProducto.getCantidad());
         //Agrego el stock al producto
         producto.agregarStock(loteProducto.getCantidad());
         productoRepositoryPort.saveProducto(producto);

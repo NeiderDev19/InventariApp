@@ -46,5 +46,6 @@ public class UsuarioEntity {
     private Rol rol;
     @Column(nullable = false)
     private LocalDateTime fechaCreacion;
+     
 
 }

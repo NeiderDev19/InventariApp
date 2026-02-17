@@ -16,4 +16,5 @@ public interface ProductoInputPort {
     List<Producto> getProductoByFiltro(String filtro);
     Producto getProductoByCodigoBarras(String codigoBarras);
     
+    
 } 

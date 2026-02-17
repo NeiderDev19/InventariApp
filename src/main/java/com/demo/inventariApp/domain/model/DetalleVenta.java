@@ -17,5 +17,7 @@ public class DetalleVenta {
     private Double subtotal;
     private Venta venta;
     private Producto producto;
+    private Double iva;
+    private Double total;
 
 }

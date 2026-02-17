@@ -22,5 +22,6 @@ public class LoteProducto {
     private int cantidad;
     private LocalDateTime fechaCompra;
     private String proveedor;
+    private int cantidadAgregada;
 
 }

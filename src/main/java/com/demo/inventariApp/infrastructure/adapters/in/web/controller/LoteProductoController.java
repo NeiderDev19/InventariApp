@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.inventariApp.application.port.in.LoteProductoInputPort;
 import com.demo.inventariApp.application.port.service.LoteProductoService;
 import com.demo.inventariApp.domain.model.LoteProducto;
 import com.demo.inventariApp.infrastructure.adapters.in.web.dto.loteProducto.LoteCreateDTO;
@@ -24,7 +25,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 @AllArgsConstructor
 public class LoteProductoController {
 
-    private final LoteProductoService loteProductoService;
+    private final LoteProductoInputPort loteProductoService;
 
     private final LoteProductoMapper mapper;
 

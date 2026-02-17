@@ -4,6 +4,7 @@ public enum TipoPago {
 
     EFECTIVO,
     TARJETA,
-    TRANSFERENCIA
+    TRANSFERENCIA,
+    CREDITO
 
 }

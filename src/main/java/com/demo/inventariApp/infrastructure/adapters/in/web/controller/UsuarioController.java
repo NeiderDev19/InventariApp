@@ -11,6 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.inventariApp.application.port.in.UsuarioInputPort;
 import com.demo.inventariApp.application.port.service.UsuarioService;
 import com.demo.inventariApp.domain.model.Usuario;
 import com.demo.inventariApp.infrastructure.adapters.in.web.dto.usuario.UsuarioResponseDTO;
@@ -23,7 +24,7 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class UsuarioController {
 
-        private final UsuarioService usuarioService;
+        private final UsuarioInputPort usuarioService;
 
         private final UsuarioMapper mapper;
 

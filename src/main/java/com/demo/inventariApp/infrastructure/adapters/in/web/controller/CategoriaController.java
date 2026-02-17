@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.demo.inventariApp.application.port.in.CategoriaInputPort;
 import com.demo.inventariApp.application.port.service.CategoriaService;
 import com.demo.inventariApp.domain.model.Categoria;
 import com.demo.inventariApp.infrastructure.adapters.in.web.dto.categoria.CreateCategoriaDTO;
@@ -29,7 +30,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 public class CategoriaController {
 
 
-    private final CategoriaService categoriaService;
+    private final CategoriaInputPort categoriaService;
 
     private final CategoriaMapper mapper;
 
