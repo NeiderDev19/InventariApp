@@ -8,7 +8,9 @@ import com.demo.inventariApp.domain.model.LoteProducto;
 import com.demo.inventariApp.infrastructure.adapters.in.web.dto.loteProducto.LoteCreateDTO;
 import com.demo.inventariApp.infrastructure.adapters.out.entity.LoteProductoEntity;
 
-@Mapper(componentModel = "spring")
+@Mapper(componentModel = "spring",
+    uses = {ProveedorMapper.class}
+)
 public interface LoteProductoMapper {
 
     LoteProducto EntityToDomain(LoteProductoEntity loteProducto);

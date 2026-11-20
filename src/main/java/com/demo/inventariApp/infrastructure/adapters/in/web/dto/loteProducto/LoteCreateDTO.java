@@ -2,6 +2,8 @@ package com.demo.inventariApp.infrastructure.adapters.in.web.dto.loteProducto;
 
 import java.time.LocalDateTime;
 
+import com.demo.inventariApp.domain.model.Proveedor;
+
 import lombok.Getter;
 import lombok.Setter;
 
@@ -15,6 +17,6 @@ public class LoteCreateDTO {
     Double iva;
     Double cantidad;
     LocalDateTime fechaCompra = this.fechaCompra.now();
-    String proveedor;
+    Proveedor proveedor;
 
 }
