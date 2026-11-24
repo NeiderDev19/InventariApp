@@ -49,5 +49,7 @@ public class ProductoEntity {
     private LocalDateTime fechaCreacion;
     @OneToMany(mappedBy = "producto")
     private List<LoteProductoEntity> loteProductos;
+    @Column(name = "precio_venta",nullable = false)
+    private Double precioVenta;
 
 }

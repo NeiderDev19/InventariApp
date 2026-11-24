@@ -8,5 +8,6 @@ public interface LoteProductoInputPort {
 
     LoteProducto agregarLote(LoteProducto loteProducto,Long id);
     List<LoteProducto> getLoteProductoByProducto(Long idProducto);
+    List<LoteProducto> getAllLotes();
 
 }

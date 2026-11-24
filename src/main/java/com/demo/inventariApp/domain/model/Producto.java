@@ -23,6 +23,7 @@ public class Producto {
     private boolean activo = true;
     private Categoria categoria;
     private LocalDateTime fechaCreacion;
+    private Double precioVenta;
 
     public void agregarStock(int cantidad){
         if(cantidad <= 0){

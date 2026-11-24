@@ -9,5 +9,6 @@ public interface LoteProductoRepositoryPort {
     LoteProducto save(LoteProducto loteProducto);
     LoteProducto getById(Long id);
     List<LoteProducto> getByIdProducto(Long id);
+    List<LoteProducto> getLotes();
     
 }

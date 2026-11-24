@@ -26,6 +26,7 @@ public class ProductoResponseDTO {
     boolean activo;
     Categoria categoria;
     LocalDateTime fechaCreacion;
+    Double precioVenta;
 
 
 }

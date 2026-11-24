@@ -2,6 +2,7 @@ package com.demo.inventariApp.infrastructure.adapters.in.web.controller;
 
 import java.util.List;
 
+import org.apache.catalina.connector.Response;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -28,6 +29,12 @@ public class LoteProductoController {
     private final LoteProductoInputPort loteProductoService;
 
     private final LoteProductoMapper mapper;
+
+
+    @GetMapping
+    public ResponseEntity<List<LoteProducto>> getAllLotes(){
+        return ResponseEntity.ok(loteProductoService.getAllLotes());
+    }
 
 
     @GetMapping("/{id}")

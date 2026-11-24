@@ -43,4 +43,10 @@ public class LoteProductoRepositoryJpaAdapter implements LoteProductoRepositoryP
         return mapper.entityListToDomainList(loteProductoJpaRepository.findByProductoIdProductoOrderByFechaCompraAsc(id));
     }
 
+    @Override
+    public List<LoteProducto> getLotes() {
+        List<LoteProductoEntity> lotes = loteProductoJpaRepository.findAll();
+        return mapper.entityListToDomainList(lotes);
+    }
+
 }

@@ -6,6 +6,11 @@ public enum UnidadProducto {
     PAQ,
     CAJ,
     BlQ,
-    DCN
+    DCN,
+    ROL,
+    KIT,
+    SET,
+    BOL,
+    PAR
 
 }

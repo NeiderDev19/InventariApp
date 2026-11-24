@@ -54,9 +54,10 @@ public class ProductoService implements ProductoInputPort {
         existente.setNombre(producto.getNombre());
         existente.setDescripcion(producto.getDescripcion());
         existente.setStockMinimo(producto.getStockMinimo());
-
+        existente.setPrecioVenta(producto.getPrecioVenta());
         //validacion producto vendido
         existente.setCodigoBarras(producto.getCodigoBarras());
+        existente.setUnidad(producto.getUnidad());
 
         if(idCategoria!=null){
             Categoria categoria = categoriaRepositoryPort.getById(idCategoria);

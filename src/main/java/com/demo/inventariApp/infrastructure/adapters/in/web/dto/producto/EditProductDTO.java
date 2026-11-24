@@ -15,5 +15,7 @@ public class EditProductDTO {
     Long idCategoria;
     int stockMinimo;
     String codigoBarras;
+    String unidad;
+    Double precioVenta;
 
 }

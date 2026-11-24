@@ -1,5 +1,14 @@
 package com.demo.inventariApp.domain.model;
 
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
 public class Proveedor {
 
     private Long id;
@@ -7,8 +16,8 @@ public class Proveedor {
     private String nit;
     private String vendedor;
     private String celular;
-    private boolean estado;
     private String direccion;
     private String email;
-
+    private boolean estado;
+    
 }

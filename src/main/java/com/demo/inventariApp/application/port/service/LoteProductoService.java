@@ -45,4 +45,9 @@ public class LoteProductoService implements LoteProductoInputPort{
         return lotes;
     }
 
+    @Override
+    public List<LoteProducto> getAllLotes() {
+        return loteProductoRepositoryPort.getLotes();
+    }
+
 }

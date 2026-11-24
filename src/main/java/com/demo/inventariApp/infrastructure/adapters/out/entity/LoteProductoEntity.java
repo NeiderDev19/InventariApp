@@ -42,7 +42,7 @@ public class LoteProductoEntity {
     @Column(nullable = false)
     private int cantidad;
     private LocalDateTime fechaCompra;
-    @ManyToOne 
+    @ManyToOne
     @JoinColumn(name = "proveedor_id",nullable = false)
     private ProveedorEntity proveedor;
     @Column(nullable = false)
